@@ -10,7 +10,9 @@ body {
   align-items: center;
   padding-top: 40px;
   padding-bottom: 40px;
-  background-color: #f5f5f5;
+  background-image: url("../css/image/cafe.jpg");
+  background-size: cover;
+
 }
 
 .form-signin {
@@ -34,11 +36,61 @@ body {
 }
 .form-signin input[type="email"] {
   margin-bottom: -1px;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+  border-top-right-radius: 50px;
+  border-top-left-radius: 50px;
 }
 .form-signin input[type="password"] {
   margin-bottom: 10px;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
 }
+
+.btn.btn-lg.btn-info.btn-block{
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
+.mb-4, .my-4 {
+    margin-bottom: 1.5rem!important;
+}
+img {
+    vertical-align: middle;
+    border-style: none;
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+/*
+input[type="checkbox"]{
+  position: relative;
+  /* display: none; */
+}
+/*
+input[type="checkbox"]:before{
+  content: '';
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #555;
+  position: relative;
+  display: inline-block;
+  background-color: #fff;
+  margin-right: 15px;
+}
+input[type="checkbox"]:after{
+  content: '';
+  width: 12px;
+  height: 12px;
+  background-color: #555;
+  border-radius: 50%;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  display: inline-block;
+}*/
