@@ -1,0 +1,25 @@
+body{
+  background-image: url('image/cup-of-coffee-1280537_1920.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 0;
+  margin: 0;
+  background-attachment: fixed;
+}
+
+label{
+  color: white;
+}
+
+h2{
+  color: white;
+}
+
+h4{
+  color: white;
+}
+
+.container1{
+  margin-left: 260px;
+}
