@@ -13,7 +13,7 @@
     <!-- Bootstrap core CSS -->
 
     <!-- Custom styles for this template -->
-    <link href="css/cadastro.css" rel="stylesheet">
+    <link href="../css/cadastro.css" rel="stylesheet">
   </head>
 
   <body class="bg-light">
@@ -25,18 +25,18 @@
       </div>
          <div class="container1">
         <div class="col-md-8 order-md-1">
-          <form class="needs-validation" novalidate>
+          <form class="needs-validation" action="validation.php" method="POST">
             <div class="row">
               <div class="col-md-6 mb-3">
-                <label for="firstName">Nome</label>
-                <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+                <label for="firstname=">Nome</label>
+                <input type="text" name="name" class="form-control" id="firstname=" placeholder="" value="" required>
                 <div class="invalid-feedback">
                   Valid first name is required.
                 </div>
               </div>
               <div class="col-md-6 mb-3">
-                <label for="lastName">Sobrenome</label>
-                <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
+                <label for="lastname=">Sobrenome</label>
+                <input type="text" name="sobrenome" class="form-control" id="lastname=" placeholder="" value="" required>
                 <div class="invalid-feedback">
                   Valid last name is required.
                 </div>
@@ -44,12 +44,12 @@
             </div>
 
             <div class="mb-3">
-              <label for="username">Username</label>
+              <label for="username=">Username</label>
               <div class="input-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text">@</span>
                 </div>
-                <input type="text" class="form-control" id="username" placeholder="Username" required>
+                <input type="text" name="username" class="form-control" id="username" placeholder="Username" required>
                 <div class="invalid-feedback" style="width: 100%;">
                   Your username is required.
                 </div>
@@ -58,17 +58,27 @@
 
             <div class="mb-3">
               <label for="email">Email <span class="text-muted">(Opcional)</span></label>
-              <input type="email" class="form-control" id="email" placeholder="you@example.com">
+              <input type="email" name="email" class="form-control" id="email" placeholder="you@example.com">
               <div class="invalid-feedback">
                 Please enter a valid email address.
               </div>
             </div>
 
+            <div class="mb-3">
+              <label for="email">Senha </label>
+              <input type="password" name="password" class="form-control" id="password" placeholder="eX@mPlE">
+              
+            </div>
+            <div class="mb-3">
+              <label for="email">Confirme sua Senha </label>
+              <input type="password" name="confirmation" class="form-control" id="confirmation" placeholder="eX@mPlE">
+              
+            </div>
 
 
             <div class="mb-3">
               <label for="state">Tipo de Website</label>
-              <select  id="website" class="form-control" required>
+              <select  id="website" name="type" class="form-control" required>
                 <option value="">Escolher...</option>
                 <option >Educativo</option>
               </select>
@@ -79,7 +89,7 @@
             <div class="row">
               <div class="col-md-5 mb-3">
                 <label for="country">País</label>
-                <select class="custom-select d-block w-100" id="country" required>
+                <select name="pais" class="custom-select d-block w-100" id="country" required>
                   <option value="">Escolher...</option>
                   <option>Brasil</option>
                 </select>
@@ -89,7 +99,7 @@
               </div>
               <div class="col-md-4 mb-3">
                 <label for="state">Estado</label>
-                <select class="custom-select d-block w-100" id="state" required>
+                <select name="estado" class="custom-select d-block w-100" id="state" required>
                   <option value="">Escolher...</option>
                   <option>São Paulo</option>
                 </select>
@@ -99,7 +109,7 @@
               </div>
               <div class="col-md-3 mb-3">
                 <label for="zip">Código-Postal</label>
-                <input type="text" class="form-control" id="zip" placeholder="" required>
+                <input name="postal" type="text" class="form-control" id="zip" placeholder="" required>
                 <div class="invalid-feedback">
                   Zip code required.
                 </div>
@@ -111,7 +121,7 @@
 
 
             <hr class="mb-4">
-            <button class="btn btn-info btn-lg btn-block" type="submit">Cadastr</button>
+            <button class="btn btn-info btn-lg btn-block" type="submit">Cadastro</button>
           </form>
         </div>
       </div>
