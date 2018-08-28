@@ -1,5 +1,5 @@
 body{
-  background-image: url('image/cup-of-coffee-1280537_1920.jpg');
+  background-image: url('../image/cafe.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -22,4 +22,16 @@ h4{
 
 .container1{
   margin-left: 260px;
+}
+
+.form-control {
+  border-radius: 50px;
+}
+#username{
+  border-radius: 0 50px 50px 0;
+
+}
+
+.input-group-text{
+border-radius:  50px 0 0 50px;
 }
