@@ -2,13 +2,34 @@
 -------------------------------------------------- */
 /* Padding below the footer and lighter body text */
 .carousel-inner{
-  
+
 }
 
 body {
   padding-top: 3rem;
   padding-bottom: 3rem;
   color: #5a5a5a;
+}
+
+.rounded-circle {
+  margin-top: 50px;
+}
+
+span{
+  /* font-size: 4em; */
+  /* position: fixed; */
+}
+
+.form-control {
+  border-top-left-radius: 50px;
+  /* border-top-right-radius: 50px; */
+  border-bottom-left-radius: 50px;
+  /* border-bottom-right-radius: 50px; */
+}
+
+#btn1 {
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
 }
 
 
@@ -29,6 +50,9 @@ body {
 .carousel-item {
   height: 32rem;
   background-color: #777;
+  height: 500px;
+  background-position: center;
+  background-size: cover;
 }
 .carousel-item > img {
   position: absolute;
