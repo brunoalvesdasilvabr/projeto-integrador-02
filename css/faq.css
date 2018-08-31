@@ -1,6 +1,19 @@
+header{
+  height: 60px;
+  background-color: #000;
+  color: #fff;
+  width: 100%;
+  position:fixed;
+  top:0
+}
+
 body {
-  margin-top: 30px;
-  background-color: #696969 ;
+  background-image: url("../images/textured_paper.png");
+}
+
+.main{
+  padding-top: 100px;
+  min-height: 95vh;
 }
 
 .list-group.help-group {
@@ -39,7 +52,7 @@ body {
   background-color: #f6f6f6;
 }
 .list-group.help-group .faq-list .list-group-item.active {
-  background-color: #33D1E0;
+  background-color: #17a2b8;
   font-weight: 700;
   border-style: double;
   color: rgba(0, 0, 0, 0.87);
@@ -72,7 +85,7 @@ body {
   text-decoration: none;
 }
 .panel.panel-help .panel-heading {
-  background-color: #33D1E0;
+  background-color:#17a2b8;
   padding: 0 16px;
   line-height: 48px;
   border-top-right-radius: 2px;

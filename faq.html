@@ -6,11 +6,41 @@
   <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
   <link rel='stylesheet prefetch' href='https://files.krve.io/f/eyespot.css'>
   <link rel='stylesheet prefetch' href='https://cdn.cloudcache.dk/materialdesignicons/1.6.50/css/materialdesignicons.min.css'>
+  <link rel="stylesheet" href='css/home.css'>
   <link rel="stylesheet" href="css/faq.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+
 </head>
 
 <body>
-  <div class="container">
+  <header>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <a class="navbar-brand" href="#">Temas</a>
+       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Freelancers <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Projetos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#"></a>
+          </li>
+        </ul>
+        <form class="form-inline mt-2 mt-md-0">
+          <input class="form-control mr-sm-2" type="text" placeholder="ex: e-commerce" aria-label="Search">
+          <button class="btn btn btn-info" type="submit">Buscar</button>
+        </form>
+      </div>
+    </nav>
+  </header>
+
+  <div class="container main">
     <div class="col-md-4">
       <ul class="list-group help-group">
         <div class="faq-list list-group nav nav-tabs">
@@ -75,7 +105,7 @@
                   <h2>Como alterar minha senha?</h2>
                 </div>
               </a>
-              <div id="help-three" class="collapse in">
+              <div id="help-three" class="collapse">
                 <div class="panel-body">
                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus nesciunt ut officiis accusantium quisquam minima praesentium, beatae fugit illo nobis fugiat adipisci quia distinctio repellat culpa saepe, optio aperiam est!</p>
                   <p><strong>Example: </strong>Facere, id excepturi iusto aliquid beatae delectus nemo enim, ad saepe nam et.</p>
@@ -83,12 +113,12 @@
               </div>
             </div>
             <div class="panel panel-default panel-help">
-              <a href="#help-three" data-toggle="collapse" data-parent="#help-accordion-3">
+              <a href="#help-three1" data-toggle="collapse" data-parent="#help-accordion-3">
                 <div class="panel-heading">
                   <h2>Cancelar Conta</h2>
                 </div>
               </a>
-              <div id="help-three" class="collapse in">
+              <div id="help-three1" class="collapse">
                 <div class="panel-body">
                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus nesciunt ut officiis accusantium quisquam minima praesentium, beatae fugit illo nobis fugiat adipisci quia distinctio repellat culpa saepe, optio aperiam est!</p>
                   <p><strong>Example: </strong>Facere, id excepturi iusto aliquid beatae delectus nemo enim, ad saepe nam et.</p>
@@ -97,41 +127,15 @@
             </div>
           </div>
         </div>
-        <div class="tab-pane" id="tab4">
+        <div class="tab-pane active" id="tab4">
           <div class="panel-group" id="help-accordion-4">
             <div class="panel panel-default panel-help">
-              <a href="#help-three" data-toggle="collapse" data-parent="#help-accordion-4">
+              <a href="#opret-produkt1" data-toggle="collapse" data-parent="#help-accordion-4">
                 <div class="panel-heading">
-                  <h2>Não consigo entrar em contato com um desenvolvedor.</h2>
+                  <h2>Como visualizar as avaliações que o desenvolvedor já recebeu no site?</h2>
                 </div>
               </a>
-              <div id="help-three" class="collapse in">
-                <div class="panel-body">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus nesciunt ut officiis accusantium quisquam minima praesentium, beatae fugit illo nobis fugiat adipisci quia distinctio repellat culpa saepe, optio aperiam est!</p>
-                  <p><strong>Example: </strong>Facere, id excepturi iusto aliquid beatae delectus nemo enim, ad saepe nam et.</p>
-                </div>
-              </div>
-            </div>
-            <div class="panel panel-default panel-help">
-              <a href="#help-three" data-toggle="collapse" data-parent="#help-accordion-4">
-                <div class="panel-heading">
-                  <h2>O desenvolvedor não responde mensagens enviadas.</h2>
-                </div>
-              </a>
-              <div id="help-three" class="collapse in">
-                <div class="panel-body">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus nesciunt ut officiis accusantium quisquam minima praesentium, beatae fugit illo nobis fugiat adipisci quia distinctio repellat culpa saepe, optio aperiam est!</p>
-                  <p><strong>Example: </strong>Facere, id excepturi iusto aliquid beatae delectus nemo enim, ad saepe nam et.</p>
-                </div>
-              </div>
-            </div>
-            <div class="panel panel-default panel-help">
-              <a href="#help-three" data-toggle="collapse" data-parent="#help-accordion-4">
-                <div class="panel-heading">
-                  <h2>Não gostei do projeto entregue.</h2>
-                </div>
-              </a>
-              <div id="help-three" class="collapse in">
+              <div id="opret-produkt1" class="collapse">
                 <div class="panel-body">
                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus nesciunt ut officiis accusantium quisquam minima praesentium, beatae fugit illo nobis fugiat adipisci quia distinctio repellat culpa saepe, optio aperiam est!</p>
                   <p><strong>Example: </strong>Facere, id excepturi iusto aliquid beatae delectus nemo enim, ad saepe nam et.</p>
@@ -139,12 +143,56 @@
               </div>
             </div>
           </div>
+        </div>
+        <div class="tab-pane active" id="tab4">
+          <div class="panel-group" id="help-accordion-4">
+            <div class="panel panel-default panel-help">
+              <a href="#opret-produkt2" data-toggle="collapse" data-parent="#help-accordion-4">
+                <div class="panel-heading">
+                  <h2>Onde encontro o portifólio?</h2>
+                </div>
+              </a>
+              <div id="opret-produkt2" class="collapse in">
+                <div class="panel-body">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus nesciunt ut officiis accusantium quisquam minima praesentium, beatae fugit illo nobis fugiat adipisci quia distinctio repellat culpa saepe, optio aperiam est!</p>
+                  <p><strong>Example: </strong>Facere, id excepturi iusto aliquid beatae delectus nemo enim, ad saepe nam et.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane active" id="tab5">
+          <div class="panel-group" id="help-accordion-5">
+            <div class="panel panel-default panel-help">
+              <a href="#opret-produkt3" data-toggle="collapse" data-parent="#help-accordion-5">
+                <div class="panel-heading">
+                  <h2>Quando o desenvolvedor disponibiliza o projeto após o pagamento?</h2>
+                </div>
+              </a>
+              <div id="opret-produkt3" class="collapse in">
+                <div class="panel-body">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus nesciunt ut officiis accusantium quisquam minima praesentium, beatae fugit illo nobis fugiat adipisci quia distinctio repellat culpa saepe, optio aperiam est!</p>
+                  <p><strong>Example: </strong>Facere, id excepturi iusto aliquid beatae delectus nemo enim, ad saepe nam et.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 
+  <!-- FOOTER -->
+  <footer class="container">
+    <p class="float-right"><a href="#">Back to top</a></p>
+    <p>&copy; 2018 Skillancer. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+  </footer>
+
   <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
   <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
   <script src="js/faq.js"></script>
 
 </body>
