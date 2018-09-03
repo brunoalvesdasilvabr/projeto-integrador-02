@@ -18,8 +18,14 @@
           </ul>
           <form class="form-inline mt-2 mt-md-0">
             <input class="form-control mr-sm-2" type="text" placeholder="ex: e-commerce" aria-label="Search" id= "textBorder">
-            <button class="btn btn btn-info" type="submit" id= "btn1">Buscar</button>
+            <button class="btn btn btn-info" type="submit" id="btn1">Buscar</button>
           </form>
         </div>
       </nav>
     </header>
+    <style>
+      #btn1 {
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+   </style>

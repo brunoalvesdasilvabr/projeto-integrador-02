@@ -9,37 +9,54 @@
 
     <title>Document</title>
     <style>
-   /* body{
-    
+    body{
+    background-image:url('image/fundo.jpg');
     width:100%;
     height:100%;
     background-size:cover;
     margin:0 auto;
     font-family: 'Raleway', sans-serif;
     color:white;
-}
 
+}
+button{
+    background-color:#50a3b8;
+   border-radius:30px;
+    border:0;
+    padding: 10px;
+}
 h2{
     text-shadow: 2px white;
-    color:black;
+ 
    width: 50%;
    text-align:center;
    margin: 0 auto;
    margin-top:-10px;
+   font-family: 'Raleway', sans-serif;
+   text-align:justify;
   
 }
 h1{
     text-align: center;
+    font-family: 'Raleway', sans-serif;
     
    
 }
-
+a{
+   color:black;
+}
+a:hover{
+    color:black;
+  
+}
 .skill{
-  position: absolute;
+  
   width: 100%;
   text-align: center;
-} */
-
+} 
+.container{
+    margin-top:70px;
+}
 </style>
 </head>
 <body>
@@ -69,10 +86,11 @@ h1{
                 <img class='mb-4' src='image/logo.png' alt=''width='140' height='150'>
             </div>
         <p> Você já pode procurar por algum desenvolvedor para o seu tipo de website <u><?php echo $websitetype ?></u>.
-            Seu username é <?php echo $username ?>.</h2><a href='home.html'>Clique aqui para encontrar um Dev</a></p>
+            Seu username é <?php echo $username ?>.</h2><button><a href='home.html'>Clique aqui para encontrar um Dev</a></button></p>
         <?php
             }else{
-            echo "<h1> As senhas não coincidem <a href='cadastro.html'>Voltar</a>";
+            echo "<h1> As senhas não coincidem <br>
+            <button><a href='cadastro.html'>Voltar</button></a>";
             echo "<div class='fundo'> </div>";
             }
         }
