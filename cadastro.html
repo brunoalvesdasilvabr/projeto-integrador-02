@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Quicksand|Raleway" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
 
@@ -17,14 +18,16 @@
   </head>
 
   <body class="bg-light">
-
+    <div class="skill">
+    <img class="mb-4" src="image/logo.png" alt=""width="140" height="150">
+  </div>
     <div class="container">
       <div class="py-5 text-center">
         <img class="d-block mx-auto mb-4" src="../../assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
         <h1 class="h1 mb-3 font-weight-bold text-white">Cadastre-se</h2>
       </div>
          <div class="container1">
-        <div class="col-md-8 order-md-1">
+        <div>
           <form class="needs-validation" action="validation.php" method="POST">
             <div class="row">
               <div class="col-md-6 mb-3">
@@ -80,16 +83,17 @@
               <label for="state">Tipo de Website</label>
               <select  id="website" name="type" class="form-control" required>
                 <option value="">Escolher...</option>
-                <option >Educativo</option>
+                <option >Educação</option>
+                <option >Vestuário</option>
+                <option >Food Service</option>
+
               </select>
             </div>
 
-
-  </div>
             <div class="row">
               <div class="col-md-5 mb-3">
                 <label for="country">País</label>
-                <select name="pais" class="custom-select d-block w-100" id="country" required>
+                <select name="pais" class="custom-select d-block w-100 form-control" id="country" required>
                   <option value="">Escolher...</option>
                   <option>Brasil</option>
                 </select>
@@ -99,7 +103,7 @@
               </div>
               <div class="col-md-4 mb-3">
                 <label for="state">Estado</label>
-                <select name="estado" class="custom-select d-block w-100" id="state" required>
+                <select name="estado" class="custom-select d-block w-100 form-control" id="state" required>
                   <option value="">Escolher...</option>
                   <option>São Paulo</option>
                 </select>

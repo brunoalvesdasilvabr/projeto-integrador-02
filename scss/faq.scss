@@ -1,19 +1,18 @@
 // Custom shit
-header{
-  height: 60px;
-  background-color: #000;
-  color: #fff;
-  width: 100%;
-  position:fixed;
-  top:0
+body {
+  margin-top: 30px;
+  background-color: #eee;
 }
 
-body {
-  background-image: url("../images/textured_paper.png");
+.form-control {
+  border-top-left-radius: 50px;
+  /* border-top-right-radius: 50px; */
+  border-bottom-left-radius: 50px;
+  /* border-bottom-right-radius: 50px; */
 }
-.main{
-  padding-top: 100px;
-  min-height: 95vh;
+#btn1 {
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
 }
 .list-group.help-group {
   margin-bottom: 20px;
@@ -111,10 +110,4 @@ body {
       }
     }
   }
-}
-
-footer{
-  text-align: center;
-  margin: 20px 0;
-
 }

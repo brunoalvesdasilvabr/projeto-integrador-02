@@ -5,6 +5,8 @@
 
 }
 
+
+
 body {
   padding-top: 3rem;
   padding-bottom: 3rem;
@@ -12,17 +14,13 @@ body {
   font-family: 'Raleway', sans-serif;
 }
 
-.page-footer {
-  background-color: #117a8b;
-}
-
 .rounded-circle {
   margin-top: 50px;
 }
 
 span{
-  font-size: 4em;
-  position: fixed;
+  /* font-size: 4em; */
+  /* position: fixed; */
 }
 
 .form-control {
@@ -67,17 +65,6 @@ span{
   height: 32rem;
 }
 
-.carousel-caption h1{
-  text-shadow: 2px 2px #083c44;
-  color:  #ffffcc;
-  font-weight: 900px;
-}
-
-.carousel-caption p{
-    color:  #ffffcc;
-    text-shadow: 1px 1px #083c44;
-}
-
 
 /* MARKETING CONTENT
 -------------------------------------------------- */
@@ -110,36 +97,7 @@ span{
   letter-spacing: -.05rem;
 }
 
-/* FOOTER */
-/* ---------------------------------------- */
-.linktop, .linktop:hover{
-  color: #ffffcc;
-  margin-left: 15px;
-  text-decoration: none;
-}
 
-.login, .login:hover{
-  color: #ffffcc;
-  margin-left: 15px;
-  text-decoration: none;
-}
-
-.cadastro, .cadastro:hover{
-  color: #ffffcc;
-  margin-left: 15px;
-  text-decoration: none;
-}
-
-.faq, .faq:hover{
-  color: #ffffcc;
-  margin-left: 15px;
-  text-decoration: none;
-}
-
-.page-footer {
-  /* margin-top: 100px; */
-  height: 150px;
-}
 /* RESPONSIVE CSS
 -------------------------------------------------- */
 
