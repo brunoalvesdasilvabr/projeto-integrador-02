@@ -1,7 +1,9 @@
 body {
   margin-top: 10px;
   background-image: url('../image/textured_paper.png');
+  font-family: 'Raleway', sans-serif;
 }
+
 
 .form-control {
   border-top-left-radius: 50px;

@@ -3,6 +3,8 @@ body {
   height: 100%;
 }
 
+
+
 body {
   display: -ms-flexbox;
   display: flex;
@@ -13,6 +15,7 @@ body {
   background-image: url("../image/cafe.jpg");
   background-size: cover;
   background-attachment: fixed;
+  font-family: 'Raleway', sans-serif;
 
 }
 
