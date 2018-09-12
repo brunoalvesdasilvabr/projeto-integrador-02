@@ -78,7 +78,8 @@ a:hover{
             $postal=$_POST["postal"];
             $password=$_POST["password"];
             $confirmation=$_POST["confirmation"];
-            if($password==$confirmation){
+            if($password===$confirmation){
+
         ?>
             <h1>Olá, <?php echo $name ?>!</h1>
             <h2>O seu registro feito com sucesso.
@@ -90,7 +91,7 @@ a:hover{
         <?php
             }else{
             echo "<h1> As senhas não coincidem <br>
-            <button><a href='cadastro.html'>Voltar</button></a>";
+            <button><a href='cadastro.php'>Voltar</button></a>";
             echo "<div class='fundo'> </div>";
             }
         }
