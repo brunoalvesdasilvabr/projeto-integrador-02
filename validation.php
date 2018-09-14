@@ -33,21 +33,21 @@ h2{
    text-align:center;
    margin: 0 auto;
    margin-top:-10px;
-   font-family: 'Raleway', sans-serif;
+   font-family: 'Montserrat', sans-serif;
    text-align:justify;
 
 }
 h1{
     text-align: center;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 
 
 }
 a{
-   color:black;
+   color:white;
 }
 a:hover{
-    color:black;
+    color:white;
 
 }
 .skill{
@@ -56,9 +56,11 @@ a:hover{
   text-align: center;
 }
 .container{
-    margin-top:70px;
+    margin-top:250px;
 }
 </style>
+
+
 </head>
 <body>
     <?php
@@ -83,15 +85,12 @@ a:hover{
 
         ?>
             <h1>Olá, <?php echo $name ?>!</h1>
-            <h2>O seu registro feito com sucesso.
-            <div class='skill'>
-                <img class='mb-4' src='image/logo.png' alt=''width='140' height='150'>
-            </div>
-        <p> Você já pode procurar por algum desenvolvedor para o seu tipo de website <u><?php echo $websitetype ?></u>.
-            Seu username é <?php echo $username ?>.</h2><button><a href='home.html'>Clique aqui para encontrar um Dev</a></button></p>
+            <h4>O seu registro foi feito com sucesso.</h4>
+            <button><a href='home.html'>Clique aqui para encontrar um Dev</a></button></p>
+
         <?php
             }else{
-            echo "<h1> As senhas não coincidem <br>
+            echo "<h2> As senhas não coincidem <br>
             <button><a href='cadastro.php'>Voltar</button></a>";
             echo "<div class='fundo'> </div>";
             }
