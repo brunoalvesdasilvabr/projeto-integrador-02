@@ -3,7 +3,7 @@
 $local_arquivo = "cadastro.php";
 $arquivo = file_get_contents($local_arquivo);
 $arquivo .= "usuarios.json\n";
-file_put_contents($local_arquivo, $arquivo);
+file_put_contents($arquivo);
  ?>
 
 <!doctype html>
@@ -68,7 +68,7 @@ file_put_contents($local_arquivo, $arquivo);
             </div>
 
             <div class="mb-3">
-              <label for="email">Email <span class="text-muted">(Opcional)</span></label>
+              <label for="email">Email <span class="text-muted"></span></label>
               <input type="email" required name="email" class="form-control" id="email" value="<?php echo (isset($_POST['firstname']) ? $_POST['firstname'] : '');?>" placeholder="you@example.com">
               <div class="invalid-feedback">
                 Please enter a valid email address.
