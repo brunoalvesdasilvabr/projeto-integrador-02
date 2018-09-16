@@ -1,9 +1,36 @@
 <?php
 
-$local_arquivo = "cadastro.php";
-$arquivo = file_get_contents($local_arquivo);
-$arquivo .= "usuarios.json\n";
-file_put_contents($arquivo);
+if ($_POST){
+  $local_arquivo = "usuarios.json";
+  $arquivo = file_get_contents($local_arquivo);
+  $arquivo .= $_POST;
+  file_put_contents($local_arquivo, $arquivo);
+}
+
+$error = [];
+foreach ($_POST as $key => $value) {
+  if($value == ""){
+    $error[] = "$key em branco!";
+  }
+}
+  if(!count($error)){
+    $json["usuarios"][] = $_POST;
+    $arquivo = json_encode($json);
+    file_put_contents($local_arquivo, $arquivo);
+    }
+
+    // if($_POST){
+    //     $name=$_POST["name"];
+    //     $sobrenome=$_POST["sobrenome"];
+    //     $username=$_POST["username"];
+    //     $websitetype=$_POST["type"];
+    //     $pais=$_POST["pais"];
+    //     $estado=$_POST["estado"];
+    //     $postal=$_POST["postal"];
+    //     $password=$_POST["password"];
+    //     $confirmation=$_POST["confirmation"];
+    //     if($password===$confirmation){
+
  ?>
 
 <!doctype html>
@@ -40,14 +67,14 @@ file_put_contents($arquivo);
             <div class="row">
               <div class="col-md-6 mb-3">
                 <label for="firstname=">Nome</label>
-                <input type="text" name="name" class="form-control" id="firstname=" placeholder="" value="<?php echo isset($_POST['firstname'])? $_POST['firstname']: '';?>" required>
+                <input type="text" name="name" class="form-control" id="firstname=" placeholder="" value="<?php echo isset($_POST['name'])? $_POST['name']: '';?>" required>
                 <div class="invalid-feedback">
                   Valid first name is required.
                 </div>
               </div>
               <div class="col-md-6 mb-3">
                 <label for="lastname=">Sobrenome</label>
-                <input type="text" name="sobrenome" class="form-control" id="lastname=" placeholder="" value=""<?php echo isset($_POST['firstname'])? $_POST['firstname'] : '';?>"" required>
+                <input type="text" name="sobrenome" class="form-control" id="lastname=" placeholder="" value="<?php echo isset($_POST['sobrenome'])? $_POST['sobrenome'] : '';?>" required>
                 <div class="invalid-feedback">
                   Valid last name is required.
                 </div>
@@ -60,7 +87,7 @@ file_put_contents($arquivo);
                 <div class="input-group-prepend">
                   <span class="input-group-text">@</span>
                 </div>
-                <input type="text" name="username" class="form-control" id="username" placeholder="Username" value="<?php echo isset($_POST['firstname'])? $_POST['firstname']: '';?>" required>
+                <input type="text" name="username" class="form-control" id="username" placeholder="Username" value="<?php echo isset($_POST['username'])? $_POST['username']: '';?>" required>
                 <div class="invalid-feedback" style="width: 100%;">
                   Your username is required.
                 </div>
@@ -69,7 +96,7 @@ file_put_contents($arquivo);
 
             <div class="mb-3">
               <label for="email">Email <span class="text-muted"></span></label>
-              <input type="email" required name="email" class="form-control" id="email" value="<?php echo (isset($_POST['firstname']) ? $_POST['firstname'] : '');?>" placeholder="you@example.com">
+              <input type="email" required name="email" class="form-control" id="email" value="<?php echo (isset($_POST['email']) ? $_POST['email'] : '');?>" placeholder="you@example.com">
               <div class="invalid-feedback">
                 Please enter a valid email address.
               </div>
@@ -121,7 +148,7 @@ file_put_contents($arquivo);
               </div>
               <div class="col-md-3 mb-3">
                 <label for="zip">Código-Postal</label>
-                <input name="postal" type="text" class="form-control" id="zip" value="<?php echo isset($_POST['firstname'])? $_POST['firstname']: '';?>" placeholder="Código-Postal" required>
+                <input name="postal" type="text" class="form-control" id="zip" value="<?php echo isset($_POST['postal'])? $_POST['postal']: '';?>" placeholder="Código-Postal" required>
                 <div class="invalid-feedback">
                   Zip code required.
                 </div>
