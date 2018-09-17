@@ -7,17 +7,17 @@ if ($_POST){
   file_put_contents($local_arquivo, $arquivo);
 }
 
-$error = [];
-foreach ($_POST as $key => $value) {
-  if($value == ""){
-    $error[] = "$key em branco!";
-  }
-}
-  if(!count($error)){
-    $json["usuarios"][] = $_POST;
-    $arquivo = json_encode($json);
-    file_put_contents($local_arquivo, $arquivo);
-    }
+// $error = [];
+// foreach ($_POST as $key => $value) {
+//   if($value == ""){
+//     $error[] = "$key em branco!";
+//   }
+// }
+//   if(!count($error)){
+//     $json["usuarios"][] = $_POST;
+//     $arquivo = json_encode($json);
+//     file_put_contents($local_arquivo, $arquivo);
+//     }
 
     // if($_POST){
     //     $name=$_POST["name"];
@@ -63,7 +63,7 @@ foreach ($_POST as $key => $value) {
       </div>
          <div class="container1">
         <div>
-          <form class="needs-validation" action="validation.php" method="POST">
+          <form class="needs-validation" action="cadastro.php" method="POST">
             <div class="row">
               <div class="col-md-6 mb-3">
                 <label for="firstname=">Nome</label>
@@ -104,12 +104,12 @@ foreach ($_POST as $key => $value) {
 
             <div class="mb-3">
               <label for="email">Senha </label>
-              <input type="password" name="password" class="form-control" id="password" value="" placeholder="eX@mPlE" required>
+              <input type="password" name="password" class="form-control" id="password" value="" placeholder="123abc" required>
 
             </div>
             <div class="mb-3">
               <label for="email">Confirme sua Senha </label>
-              <input type="password" name="confirmation" class="form-control" id="confirmation" value="" placeholder="eX@mPlE" required>
+              <input type="password" name="confirmation" class="form-control" id="confirmation" value="" placeholder="123abc" required>
 
             </div>
 
@@ -206,4 +206,3 @@ foreach ($_POST as $key => $value) {
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
   </body>
 </html>
-usuarios.json
