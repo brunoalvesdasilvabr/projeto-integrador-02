@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -67,69 +69,12 @@ a:hover{
         include 'header.php';
     ?>
     <div class="container text-center">
-      <?php
-      if ($_POST) {
-          $local_file = "usuarios.json";
-          if(file_exists($local_file)){
-            $file = file_get_contents($local_file);
-            $json = json_decode($file, true);
-          }else{
-            $json = [
-              "usuarios" => []
-            ];
-          }
-          $error = [];
-          foreach ($_POST as $key => $value) {
-            if($value == ""){
-              $error[] = "$key em branco!";
-            }
-          }
-          if(!count($error)){
-            $json["usuarios"][] = $_POST;
-            $file = json_encode($json);
-            file_put_contents($local_file, $file);
-            }
-        }
-      // if ($_POST){
-      //   $local_arquivo = "usuarios.json";
-      //   $arquivo = file_get_contents($local_arquivo);
-      //   $arquivo['usuarios'][]= $_POST;
-      //   file_put_contents($local_arquivo, $arquivo);
-      // }
-
-        if($_POST){
-            $name=$_POST["name"];
-            $sobrenome=$_POST["sobrenome"];
-            $username=$_POST["username"];
-            $websitetype=$_POST["type"];
-            $pais=$_POST["pais"];
-            $estado=$_POST["estado"];
-            $postal=$_POST["postal"];
-            $password=$_POST["password"];
-            $confirmation=$_POST["confirmation"];
-            if($password===$confirmation){
-
-        ?>
-            <h1>Olá, <?php echo $name ?>!</h1>
-            <h4>O seu registro foi feito com sucesso.</h4>
-            <button><a href='home.html'>Clique aqui para encontrar um Dev</a></button></p>
-
-        <?php
-            }else{
-            echo "<h2> As senhas não coincidem <br>
-            <button><a href='cadastro.php'>Voltar</button></a>";
-            echo "<div class='fundo'> </div>";
-            }
-        }
-        ?>
-        </div>
+        <h1>Olá, <?php echo $_SESSION['nome_usuario']; ?>!</h1>
+        <h4>O seu registro foi feito com sucesso.</h4>
+        <button><a href='home.html'>Clique aqui para encontrar um Dev</a></button></p>
+    </div>
     <?php
         include 'footer.php';
     ?>
-    <?php
-if(isset($error) && count($error)){
-  echo implode("<br>", $error);
-}
-?>
 </body>
 </html>
