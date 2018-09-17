@@ -11,7 +11,7 @@ body {
   padding-top: 3rem;
   padding-bottom: 3rem;
   color: #5a5a5a;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .rounded-circle {
@@ -45,18 +45,29 @@ span{
 }
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
-  bottom: 3rem;
-  z-index: 10;
+  bottom: 1rem;
+  z-index: 30;
+  color:   #f0ecbb;
+  font-size: 20em;
+}
+
+.txt-opacity {
+background-color: #343a40ad;
+border-top-left-radius: 7px;
+border-top-right-radius: 7px;
+border-bottom-right-radius: 7px;
+border-bottom-left-radius: 7px;
 }
 
 /* Declare heights because of positioning of img element */
 .carousel-item {
-  height: 32rem;
+  height: 40rem;
   background-color: #777;
-  height: 500px;
+  height: 550px;
   background-position: center;
   background-size: cover;
 }
+
 .carousel-item > img {
   position: absolute;
   top: 0;
@@ -66,15 +77,20 @@ span{
 }
 
 
+
+
+
 /* MARKETING CONTENT
 -------------------------------------------------- */
 
 /* Center align the text within the three columns below the carousel */
 .marketing .col-lg-4 {
+  margin-top: 2em;
   margin-bottom: 1.5rem;
   text-align: center;
 }
 .marketing h2 {
+  margin-top: 2em;
   font-weight: 400;
 }
 .marketing .col-lg-4 p {
@@ -82,6 +98,13 @@ span{
   margin-left: .75rem;
 }
 
+p #btn-height {
+  margin-top: 200px;
+}
+
+.btn btn {
+  margin-top: 20px;
+}
 
 /* Featurettes
 ------------------------- */
@@ -97,7 +120,31 @@ span{
   letter-spacing: -.05rem;
 }
 
+/*FOOTER-----------------------------------------------*/
+footer {
+  background-color: #17a3b8;
+  height: 150px;
+  color: bisque;
+}
 
+.float-right{
+  margin-left: 15px;
+  color: bisque;
+}
+
+div .container{
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+.login, .cadastro, .faq, .linktop, .privacidade, .termos{
+  color: bisque;
+  text-decoration-line: none;
+}
+
+:hover.login, .cadastro, .faq, .linktop, .privacidade, .termos{
+  color: bisque;
+}
 /* RESPONSIVE CSS
 -------------------------------------------------- */
 
