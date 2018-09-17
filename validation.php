@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+<?php session_start(); ?>
+
+>>>>>>> 1b085d0650e767edd91dcfb3825356b71b288f3b
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,6 +10,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
+<<<<<<< HEAD
+=======
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Quicksand|Raleway" rel="stylesheet">
+>>>>>>> 1b085d0650e767edd91dcfb3825356b71b288f3b
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
     <title>Document</title>
@@ -15,7 +24,11 @@
     height:100%;
     background-size:cover;
     margin:0 auto;
+<<<<<<< HEAD
     font-family: 'Raleway', sans-serif;
+=======
+    font-family: 'Montserrat';
+>>>>>>> 1b085d0650e767edd91dcfb3825356b71b288f3b
     color:white;
 
 }
@@ -27,11 +40,16 @@ button{
 }
 h2{
     text-shadow: 2px white;
+<<<<<<< HEAD
  
+=======
+
+>>>>>>> 1b085d0650e767edd91dcfb3825356b71b288f3b
    width: 50%;
    text-align:center;
    margin: 0 auto;
    margin-top:-10px;
+<<<<<<< HEAD
    font-family: 'Raleway', sans-serif;
    text-align:justify;
   
@@ -58,12 +76,43 @@ a:hover{
     margin-top:70px;
 }
 </style>
+=======
+   font-family: 'Montserrat';
+   text-align:justify;
+
+}
+h1{
+    text-align: center;
+    font-family: 'Montserrat';
+
+
+}
+a{
+   color:white;
+}
+a:hover{
+    color:white;
+
+}
+.skill{
+
+  width: 100%;
+  text-align: center;
+}
+.container{
+    margin-top:250px;
+}
+</style>
+
+
+>>>>>>> 1b085d0650e767edd91dcfb3825356b71b288f3b
 </head>
 <body>
     <?php
         include 'header.php';
     ?>
     <div class="container text-center">
+<<<<<<< HEAD
         <?php
 
 
@@ -96,8 +145,18 @@ a:hover{
         }
         ?>
         </div>
+=======
+        <h1>Olá, <?php echo $_SESSION['nome_usuario']; ?>!</h1>
+        <h4>O seu registro foi feito com sucesso.</h4>
+        <button><a href='home.html'>Clique aqui para encontrar um Dev</a></button></p>
+    </div>
+>>>>>>> 1b085d0650e767edd91dcfb3825356b71b288f3b
     <?php
         include 'footer.php';
     ?>
 </body>
+<<<<<<< HEAD
 </html>
+=======
+</html>
+>>>>>>> 1b085d0650e767edd91dcfb3825356b71b288f3b
