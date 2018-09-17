@@ -1,37 +1,4 @@
-<?php
 
-if ($_POST){
-  $local_arquivo = "usuarios.json";
-  $arquivo = file_get_contents($local_arquivo);
-  $arquivo .= $_POST;
-  file_put_contents($local_arquivo, $arquivo);
-}
-
-// $error = [];
-// foreach ($_POST as $key => $value) {
-//   if($value == ""){
-//     $error[] = "$key em branco!";
-//   }
-// }
-//   if(!count($error)){
-//     $json["usuarios"][] = $_POST;
-//     $arquivo = json_encode($json);
-//     file_put_contents($local_arquivo, $arquivo);
-//     }
-
-    // if($_POST){
-    //     $name=$_POST["name"];
-    //     $sobrenome=$_POST["sobrenome"];
-    //     $username=$_POST["username"];
-    //     $websitetype=$_POST["type"];
-    //     $pais=$_POST["pais"];
-    //     $estado=$_POST["estado"];
-    //     $postal=$_POST["postal"];
-    //     $password=$_POST["password"];
-    //     $confirmation=$_POST["confirmation"];
-    //     if($password===$confirmation){
-
- ?>
 
 <!doctype html>
 <html lang="en">
@@ -63,7 +30,7 @@ if ($_POST){
       </div>
          <div class="container1">
         <div>
-          <form class="needs-validation" action="cadastro.php" method="POST">
+          <form class="needs-validation" action="validation.php" method="POST">
             <div class="row">
               <div class="col-md-6 mb-3">
                 <label for="firstname=">Nome</label>

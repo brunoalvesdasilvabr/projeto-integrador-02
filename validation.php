@@ -67,10 +67,36 @@ a:hover{
         include 'header.php';
     ?>
     <div class="container text-center">
-        <?php
+      <?php
+      if ($_POST) {
+          $local_file = "usuarios.json";
+          if(file_exists($local_file)){
+            $file = file_get_contents($local_file);
+            $json = json_decode($file, true);
+          }else{
+            $json = [
+              "usuarios" => []
+            ];
+          }
+          $error = [];
+          foreach ($_POST as $key => $value) {
+            if($value == ""){
+              $error[] = "$key em branco!";
+            }
+          }
+          if(!count($error)){
+            $json["usuarios"][] = $_POST;
+            $file = json_encode($json);
+            file_put_contents($local_file, $file);
+            }
+        }
+      // if ($_POST){
+      //   $local_arquivo = "usuarios.json";
+      //   $arquivo = file_get_contents($local_arquivo);
+      //   $arquivo['usuarios'][]= $_POST;
+      //   file_put_contents($local_arquivo, $arquivo);
+      // }
 
-
-        // var_dump($_POST);
         if($_POST){
             $name=$_POST["name"];
             $sobrenome=$_POST["sobrenome"];
