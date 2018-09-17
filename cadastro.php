@@ -1,37 +1,48 @@
 <?php
+session_start();
+if ($_POST) {
+    $local_file = "usuarios.json";
+    if(file_exists($local_file)){
+      $file = file_get_contents($local_file);
+      $json = json_decode($file, true);
+    }else{
+      $json = [
+        "usuarios" => []
+      ];
+    }
+    //validacao
+    $error = [];
+    foreach ($_POST as $key => $value) {
+      if($value == ""){
+        $error[] = "$key em branco!";
+      }
+    }
+    $password=$_POST["password"];
+    $confirmation=$_POST["confirmation"];
+    if($password!=$confirmation){
+      $error[] = "As senhas não coincidem";
+    }
 
-if ($_POST){
-  $local_arquivo = "usuarios.json";
-  $arquivo = file_get_contents($local_arquivo);
-  $arquivo .= $_POST;
-  file_put_contents($local_arquivo, $arquivo);
-}
+    if(!count($error)){
+      $json["usuarios"][] = $_POST;
+      $file = json_encode($json);
+      file_put_contents($local_file, $file);
+      $_SESSION['nome_usuario'] = $_POST["name"];
+      header('Location: validation.php');
+    }
 
-// $error = [];
-// foreach ($_POST as $key => $value) {
-//   if($value == ""){
-//     $error[] = "$key em branco!";
-//   }
-// }
-//   if(!count($error)){
-//     $json["usuarios"][] = $_POST;
-//     $arquivo = json_encode($json);
-//     file_put_contents($local_arquivo, $arquivo);
-//     }
+      // $name=$_POST["name"];
+      // $sobrenome=$_POST["sobrenome"];
+      // $username=$_POST["username"];
+      // $websitetype=$_POST["type"];
+      // $pais=$_POST["pais"];
+      // $estado=$_POST["estado"];
+      // $postal=$_POST["postal"];
+      // $password=$_POST["password"];
+      // $confirmation=$_POST["confirmation"];
+    }
 
-    // if($_POST){
-    //     $name=$_POST["name"];
-    //     $sobrenome=$_POST["sobrenome"];
-    //     $username=$_POST["username"];
-    //     $websitetype=$_POST["type"];
-    //     $pais=$_POST["pais"];
-    //     $estado=$_POST["estado"];
-    //     $postal=$_POST["postal"];
-    //     $password=$_POST["password"];
-    //     $confirmation=$_POST["confirmation"];
-    //     if($password===$confirmation){
-
- ?>
+  ?>
 
 <!doctype html>
 <html lang="en">
@@ -67,16 +78,16 @@ if ($_POST){
             <div class="row">
               <div class="col-md-6 mb-3">
                 <label for="firstname=">Nome</label>
-                <input type="text" name="name" class="form-control" id="firstname=" placeholder="" value="<?php echo isset($_POST['name'])? $_POST['name']: '';?>" required>
+                <input type="text" name="name" class="form-control" id="firstname=" placeholder="" value="<?php echo isset($_POST['name'])? $_POST['name']: '';?>" >
                 <div class="invalid-feedback">
-                  Valid first name is required.
+                  Valid first name is .
                 </div>
               </div>
               <div class="col-md-6 mb-3">
                 <label for="lastname=">Sobrenome</label>
-                <input type="text" name="sobrenome" class="form-control" id="lastname=" placeholder="" value="<?php echo isset($_POST['sobrenome'])? $_POST['sobrenome'] : '';?>" required>
+                <input type="text" name="sobrenome" class="form-control" id="lastname=" placeholder="" value="<?php echo isset($_POST['sobrenome'])? $_POST['sobrenome'] : '';?>" >
                 <div class="invalid-feedback">
-                  Valid last name is required.
+                  Valid last name is .
                 </div>
               </div>
             </div>
@@ -87,16 +98,16 @@ if ($_POST){
                 <div class="input-group-prepend">
                   <span class="input-group-text">@</span>
                 </div>
-                <input type="text" name="username" class="form-control" id="username" placeholder="Username" value="<?php echo isset($_POST['username'])? $_POST['username']: '';?>" required>
+                <input type="text" name="username" class="form-control" id="username" placeholder="Username" value="<?php echo isset($_POST['username'])? $_POST['username']: '';?>" >
                 <div class="invalid-feedback" style="width: 100%;">
-                  Your username is required.
+                  Your username is .
                 </div>
               </div>
             </div>
 
             <div class="mb-3">
               <label for="email">Email <span class="text-muted"></span></label>
-              <input type="email" required name="email" class="form-control" id="email" value="<?php echo (isset($_POST['email']) ? $_POST['email'] : '');?>" placeholder="you@example.com">
+              <input type="email"  name="email" class="form-control" id="email" value="<?php echo (isset($_POST['email']) ? $_POST['email'] : '');?>" placeholder="you@example.com">
               <div class="invalid-feedback">
                 Please enter a valid email address.
               </div>
@@ -104,19 +115,19 @@ if ($_POST){
 
             <div class="mb-3">
               <label for="email">Senha </label>
-              <input type="password" name="password" class="form-control" id="password" value="" placeholder="123abc" required>
+              <input type="password" name="password" class="form-control" id="password" value="" placeholder="123abc" >
 
             </div>
             <div class="mb-3">
               <label for="email">Confirme sua Senha </label>
-              <input type="password" name="confirmation" class="form-control" id="confirmation" value="" placeholder="123abc" required>
+              <input type="password" name="confirmation" class="form-control" id="confirmation" value="" placeholder="123abc" >
 
             </div>
 
 
             <div class="mb-3">
               <label for="state">Tipo de Website</label>
-              <select  id="website" name="type" class="form-control" required>
+              <select  id="website" name="type" class="form-control" >
                 <option value="">Escolher...</option>
                 <option >Educação</option>
                 <option >Vestuário</option>
@@ -128,7 +139,7 @@ if ($_POST){
             <div class="row">
               <div class="col-md-5 mb-3">
                 <label for="country">País</label>
-                <select name="pais" class="custom-select d-block w-100 form-control" id="country" required>
+                <select name="pais" class="custom-select d-block w-100 form-control" id="country" >
                   <option value="">Escolher...</option>
                   <option>Brasil</option>
                 </select>
@@ -138,7 +149,7 @@ if ($_POST){
               </div>
               <div class="col-md-4 mb-3">
                 <label for="state">Estado</label>
-                <select name="estado" class="custom-select d-block w-100 form-control" id="state" required>
+                <select name="estado" class="custom-select d-block w-100 form-control" id="state" >
                   <option value="">Escolher...</option>
                   <option>São Paulo</option>
                 </select>
@@ -148,16 +159,22 @@ if ($_POST){
               </div>
               <div class="col-md-3 mb-3">
                 <label for="zip">Código-Postal</label>
-                <input name="postal" type="text" class="form-control" id="zip" value="<?php echo isset($_POST['postal'])? $_POST['postal']: '';?>" placeholder="Código-Postal" required>
+                <input name="postal" type="text" class="form-control" id="zip" value="<?php echo isset($_POST['postal'])? $_POST['postal']: '';?>" placeholder="Código-Postal" >
                 <div class="invalid-feedback">
-                  Zip code required.
+                  Zip code .
                 </div>
               </div>
             </div>
             <hr class="mb-4">
 
             <hr class="mb-4">
+              <?php
 
+              if(isset($error) && count($error)){
+                echo implode("<br>", $error);
+              }
+
+               ?>
 
             <hr class="mb-4">
             <button class="btn btn-info btn-lg btn-block" type="submit">Cadastro</button>

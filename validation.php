@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,7 +18,7 @@
     height:100%;
     background-size:cover;
     margin:0 auto;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat';
     color:white;
 
 }
@@ -33,13 +35,13 @@ h2{
    text-align:center;
    margin: 0 auto;
    margin-top:-10px;
-   font-family: 'Montserrat', sans-serif;
+   font-family: 'Montserrat';
    text-align:justify;
 
 }
 h1{
     text-align: center;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat';
 
 
 }
@@ -67,36 +69,10 @@ a:hover{
         include 'header.php';
     ?>
     <div class="container text-center">
-        <?php
-
-
-        // var_dump($_POST);
-        if($_POST){
-            $name=$_POST["name"];
-            $sobrenome=$_POST["sobrenome"];
-            $username=$_POST["username"];
-            $websitetype=$_POST["type"];
-            $pais=$_POST["pais"];
-            $estado=$_POST["estado"];
-            $postal=$_POST["postal"];
-            $password=$_POST["password"];
-            $confirmation=$_POST["confirmation"];
-            if($password===$confirmation){
-
-        ?>
-            <h1>Olá, <?php echo $name ?>!</h1>
-            <h4>O seu registro foi feito com sucesso.</h4>
-            <button><a href='home.html'>Clique aqui para encontrar um Dev</a></button></p>
-
-        <?php
-            }else{
-            echo "<h2> As senhas não coincidem <br>
-            <button><a href='cadastro.php'>Voltar</button></a>";
-            echo "<div class='fundo'> </div>";
-            }
-        }
-        ?>
-        </div>
+        <h1>Olá, <?php echo $_SESSION['nome_usuario']; ?>!</h1>
+        <h4>O seu registro foi feito com sucesso.</h4>
+        <button><a href='home.html'>Clique aqui para encontrar um Dev</a></button></p>
+    </div>
     <?php
         include 'footer.php';
     ?>
