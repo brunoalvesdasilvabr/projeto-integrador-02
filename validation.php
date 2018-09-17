@@ -16,7 +16,7 @@
     height:100%;
     background-size:cover;
     margin:0 auto;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat';
     color:white;
 
 }
@@ -33,13 +33,13 @@ h2{
    text-align:center;
    margin: 0 auto;
    margin-top:-10px;
-   font-family: 'Montserrat', sans-serif;
+   font-family: 'Montserrat';
    text-align:justify;
 
 }
 h1{
     text-align: center;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat';
 
 
 }
@@ -126,5 +126,10 @@ a:hover{
     <?php
         include 'footer.php';
     ?>
+    <?php
+if(isset($error) && count($error)){
+  echo implode("<br>", $error);
+}
+?>
 </body>
 </html>

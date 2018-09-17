@@ -37,7 +37,7 @@ h4{
   border-radius: 50px;
 }
 #username{
-  border-radius: 50px;
+  border-radius: 0 0 50px 50px  ;
 
 }
 
@@ -49,11 +49,4 @@ border-radius:  50px;
   position: absolute;
   width: 100%;
   text-align: center;
-}
-
-.btn.btn-lg.btn-info.btn-block{
-  border-top-left-radius: 50px;
-  border-top-right-radius: 50px;
-  border-bottom-left-radius: 50px;
-  border-bottom-right-radius: 50px;
 }
