@@ -1,9 +1,9 @@
 <?php
-  if (isset($_POST['email'])) && (isset($_POST['senha'])) {
-    session_start();
-    $usuario = true ($_POST['email']);
-		$senha = true($_POST['senha']);
-    
+  session_start();
+  if (isset($_POST['email']) && isset($_POST['senha'])) {
+    $usuario =($_POST['email']);
+		$senha =($_POST['senha']);
+
     if(isset($_POST['lembrarUsuario'])) {
       setcookie("email", $_POST ["email"]);
     }else{

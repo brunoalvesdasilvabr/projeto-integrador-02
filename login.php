@@ -30,10 +30,10 @@
           <input type="checkbox" name="lembrarUsuario" value="remember-me">Lembrar-me
         </label>
       </div>
-      <button href="/home.html" class="btn btn-lg btn-info btn-block" type="submit">Entrar</button>
+      <button href='home.html' class="btn btn-lg btn-info btn-block" type="submit"><a>Entrar</a></button>
        <!-- Opção Botão -->
       <!-- <input class="btn btn-lg btn-info btn-block" href="/home.html" type="submit" value="Entrar"> -->
-      <!-- <a href="home.html" class="btn btn-lg btn-info btn-block">Entrar</a> --> 
+      <!-- <a href="home.html" class="btn btn-lg btn-info btn-block">Entrar</a> -->
       <p class="mt-5 mb-3 text-info">&copy; 2018 Skillancer. &middot; <a>Privacy</a> &middot; <a>Terms</a></p>
     </form>
   </body>
